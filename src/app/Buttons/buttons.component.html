@@ -1,0 +1,15 @@
+<div class='container'>
+    <h1>Buttons</h1>
+    <div class="box">
+        <button class='btn-danger' [ngClass]="{
+            disabled: disabled_switch,
+            btn: true
+        }" (click)="text_color = 'text-danger'">Red</button>
+        <button class='btn btn-success' [disabled]='disabled_switch'
+            (click)="text_color = 'text-success'">Green</button>
+        <button class='btn btn-primary' [class.disabled]="disabled_switch"
+            (click)="text_color = 'text-primary'">Blue</button>
+    </div>
+    <p class='bold' [class]="text_color">Este texto va a cambiar de color</p>
+    <button class='btn btn-secondary' (click)="disabled_switch = !disabled_switch">on / off</button>
+</div>
